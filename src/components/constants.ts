@@ -14,8 +14,8 @@ export const LeftBar = styled.div`
 display:flex;
 position:relative;
 flex-direction:column;
-height:calc(100% - 80px);
-padding:40px;
+height:calc(100% - 70px);
+padding:35px;
 justify-content:space-between;
 align-items:center;
 background:#036cea;

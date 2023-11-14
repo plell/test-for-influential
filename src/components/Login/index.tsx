@@ -38,9 +38,9 @@ type Leftprops = {
 const Left = ({ selectedItem, setSelectedItem }: Leftprops) => {
   return (
     <LeftBar>
-      <Image src='logo.svg' style={{ marginBottom: 100 }} />
-
+      <div style={{ height: 60 }} />
       <InnerWrap>
+        <Image src='logo.svg' style={{ marginBottom: 100 }} />
         {list.map((l, i) => {
           const selected = selectedItem === i;
           return (
@@ -59,9 +59,11 @@ const Left = ({ selectedItem, setSelectedItem }: Leftprops) => {
       </InnerWrap>
 
       <Footer>
-        {footerItems.map((s, i) => {
-          return <FooterTxt key={i}>{s}</FooterTxt>;
-        })}
+        <Flex style={{ justifyContent: "space-evenly", width: "100%" }}>
+          {footerItems.map((s, i) => {
+            return <FooterTxt key={i}>{s}</FooterTxt>;
+          })}
+        </Flex>
       </Footer>
     </LeftBar>
   );
@@ -160,7 +162,10 @@ const Form1 = (props: Pro) => {
       >
         <Title>Choose an account type</Title>
         <Desc>
-          If you need more info, please visit our <a href=''>help page.</a>
+          If you need more info, please visit our{" "}
+          <span style={{ color: "#3E97FF", cursor: "pointer" }}>
+            help page.
+          </span>
         </Desc>
       </div>
       <Flex style={{ marginTop: 35 }}>
@@ -336,7 +341,7 @@ const Form2 = () => {
 
       <Already>
         Already have an Account?{" "}
-        <span style={{ color: "#3E97FF" }}>Sign in</span>
+        <span style={{ color: "#3E97FF", cursor: "pointer" }}>Sign in</span>
       </Already>
     </div>
   );
@@ -464,7 +469,6 @@ const PrimeBtn = styled.div`
 `;
 
 const FooterTxt = styled.div`
-  display: flex;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -474,9 +478,12 @@ const FooterTxt = styled.div`
 `;
 const Footer = styled.div`
   display: flex;
-  padding: 35px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+
   width: calc(100% - 70px);
-  justify-content: space-evenly;
+
   margin-top: 100px;
 `;
 const InnerWrap = styled.div`
