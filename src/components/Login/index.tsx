@@ -466,6 +466,7 @@ const PrimeBtn = styled.div`
   cursor: pointer;
   margin-bottom: 20px;
   user-select: none;
+  color: #ffffff;
 `;
 
 const FooterTxt = styled.div`

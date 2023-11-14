@@ -23,6 +23,7 @@ min-width:500px;
 background-image: url('hex.svg');
 background-size:cover;
 overflow:auto;
+color: #ffffff;
 `
 export const RightBar = styled.div`
 display:flex;
