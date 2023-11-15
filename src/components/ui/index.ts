@@ -36,7 +36,6 @@ type TextFieldProps = {
       padding?: number;
 }
 export const TextField:any = styled.input`
-
 color:  #7E8299 !important;
 font-size: 12px !important;
 font-style: normal !important;
@@ -46,7 +45,7 @@ background:#fff;
 width:calc(100% - 24px);
 border-radius: 6px;
 border: 1px solid #E1E3EA;
-padding:10px 12px !important;
+padding:10px 12px;
 margin-bottom:20px;
 `;
 export const Select:any = styled(mui.Select)`

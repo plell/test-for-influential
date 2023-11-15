@@ -31,6 +31,7 @@ position:relative;
 flex-direction:column;
 height:calc(100% - 80px);
 padding:40px;
+overflow:auto;
 width:100%;
 justify-content:center;
 align-items:center;
@@ -48,12 +49,19 @@ cursor:pointer;
 
 type ImageProps = {
     src: string
-    
+    selected?: boolean
 }
 export const Image = styled.img<ImageProps>`
 src:url('${p => p.src}');
 background-repeat:no-repeat;
 background-size:contain;
+
+
+`
+
+export const Svg = styled.svg<ImageProps>`
+src:url('${p => p.src}');
+
 
 `
 

@@ -69,9 +69,23 @@ const Left = ({ selectedItem, setSelectedItem }: Leftprops) => {
   );
 };
 
-type CheckProps = {};
+type CheckProps = {
+  style?: Record<string, string | number>;
+};
 
-const StyledCheckbox = styled.div<CheckProps>`
+export const Checkbox = ({ style }: CheckProps) => {
+  const [checked, setChecked] = useState(false);
+
+  return (
+    <StyledCheckbox onClick={() => setChecked(!checked)} style={style}>
+      <Icon style={{ opacity: checked ? 1 : 0 }} viewBox='0 0 24 24'>
+        <polyline points='20 6 9 17 4 12' />
+      </Icon>
+    </StyledCheckbox>
+  );
+};
+
+const StyledCheckbox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +94,6 @@ const StyledCheckbox = styled.div<CheckProps>`
   background: white;
   border-radius: 3px;
   transition: all 150ms;
-  margin-bottom: 20px;
   cursor: pointer;
   border: 1px solid #e1e3ea;
 `;
@@ -247,7 +260,7 @@ type H = {
   onClick: () => void;
 };
 
-const Hider = ({ hide, onClick }: H) => {
+export const Hider = ({ hide, onClick }: H) => {
   return (
     <HidePassword onClick={onClick}>
       <Image
@@ -259,7 +272,6 @@ const Hider = ({ hide, onClick }: H) => {
 };
 
 const Form2 = () => {
-  const [checked, setChecked] = useState(false);
   const [p1, setP1] = useState(true);
   const [p2, setP2] = useState(true);
   return (
@@ -326,11 +338,7 @@ const Form2 = () => {
       </Relative>
 
       <Flex style={{ userSelect: "none" }}>
-        <StyledCheckbox onClick={() => setChecked(!checked)}>
-          <Icon style={{ opacity: checked ? 1 : 0 }} viewBox='0 0 24 24'>
-            <polyline points='20 6 9 17 4 12' />
-          </Icon>
-        </StyledCheckbox>
+        <Checkbox style={{ marginBottom: 20 }} />
         <Flex>
           <Accept>I Accept the </Accept>
           <Link>Terms</Link>
@@ -357,7 +365,7 @@ const Already = styled.div`
   line-height: 14px; /* 100% */
 `;
 
-const Relative = styled.div`
+export const Relative = styled.div`
   position: relative;
 `;
 
@@ -376,7 +384,7 @@ const Link = styled.div`
   cursor: pointer;
 `;
 
-const Flex = styled.div`
+export const Flex = styled.div`
   display: flex;
 `;
 
@@ -437,7 +445,7 @@ const Right = ({ selectedItem, setSelectedItem }: Rightprops) => {
   );
 };
 
-const HidePassword = styled.div`
+export const HidePassword = styled.div`
   display: flex;
   height: 100%;
   padding: 10px;

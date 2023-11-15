@@ -16,6 +16,7 @@ html, body, #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow:hidden;
 }
 
 
@@ -36,3 +37,90 @@ html, body, #root {
   border-radius: 8px;
 }
 
+.myClassName{
+  border:none;
+}
+
+  .myControlClassName{
+    cursor:pointer;
+    display: flex;
+    width: 112px;
+    /* height: 38px; */
+    padding: 0 12px;
+    height:38px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #F9F9F9;
+    color:  #A1A5B7;
+    border:none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12px; /* 100% */
+    
+  }
+
+  .myControlClassNameActive{
+    cursor:pointer;
+    display: flex;
+    width: 112px;
+    /* height: 38px; */
+    padding: 0 12px;
+    height:38px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #FFFFFF;
+    color:  #3F4254;
+    border:none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12px; /* 100% */
+    
+  }
+  
+  .myPlaceholderClassName{
+    border:none;
+  }
+  .myMenuClassName{
+    
+    display: flex;
+    /* width: 180px; */
+    padding: 10px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    border-radius: 12px;
+    border: 1px solid  #F1F1F2;
+    background:  #FFF;
+
+    /* s-2-widget-intense */
+    box-shadow: 0px 8px 14px 0px rgba(15, 42, 81, 0.04);
+  }
+  .myArrowClassName{
+
+  }
+
+  .myOptionClassName{
+    width:100%;
+    color: #5E6278;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px; /* 100% */
+  }
+
+  .mySelectedClassName{
+    width:100%;
+    color: #3E97FF !important;
+    background:#EEF6FF !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px; /* 100% */
+  }
